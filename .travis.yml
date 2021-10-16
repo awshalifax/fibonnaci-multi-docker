@@ -15,7 +15,7 @@ after_success:
   - docker build -t awshalifax/server:latest ./server
   - docker build -t awshalifax/worker:latest ./worker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push client:latest
-  - docker push nginx:latest
-  - docker push server:latest
-  - docker push worker:latest
+  - docker push awshalifax/client:latest
+  - docker push awshalifax/nginx:latest
+  - docker push awshalifax/server:latest
+  - docker push awshalifax/worker:latest
